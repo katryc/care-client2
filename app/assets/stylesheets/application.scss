@@ -15,3 +15,100 @@
  *= require foundation_and_overrides
 
  */
+@import 'landing';
+@import 'appointments';
+
+
+body {
+  background-color: #e1f5fe;
+  color: #333;
+  font-size: 13px;
+  line-height: 18px;
+  list-style: none;
+  padding:20px;
+  text-align: center;
+  align-items: center;
+
+}
+li {list-style: none}
+
+
+p, ol, ul, td {
+  font-family: GillSans, Calibri, Trebuchet , sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.top-bar{
+  background-color: #f06292;
+}
+.button.expanded {
+  width:80%;
+  margin-left: 100px;
+  
+}
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #f06292;
+
+  &:visited {
+    color: #f06296;
+  }
+
+
+}
+.logo{
+  border: 0.6px solid white;
+  max-width: 80px;
+}
+.logo a{
+  color: #616161 ;
+  font-size: 3em;
+  text-shadow: 1px 2px white;
+}
+.button-group .button {
+  color: #f06292;
+}
+.button.alert{
+  background-color: #2199e8;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: #f06292;
+  background-color: #f06292;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: #f50057;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid #2199e8;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f8bbd0;
+
+
+
+  ul li {
+    font-size: 12px;
+    list-style: none;
+  }
+
+}
+thead th {font-size: 0.5em;}

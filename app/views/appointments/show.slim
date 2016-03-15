@@ -1,0 +1,22 @@
+p#notice= notice
+p
+  strong Start time:
+  = @appointment.start_time
+p
+  strong End time:
+  = @appointment.end_time
+p
+  strong First name:
+  = @appointment.first_name
+p
+  strong Last name:
+  = @appointment.last_name
+p
+  strong Comments:
+  = @appointment.comments
+
+
+.hollow.button
+  = link_to 'Edit', edit_appointment_path(@appointment)
+.hollow.button.success
+  = link_to 'Back', appointments_path

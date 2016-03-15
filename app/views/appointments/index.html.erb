@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Appointments</h1>
 
-<table>
+<div class="expanded button">
+ <%= link_to 'New Appointment', new_appointment_path %>
+</div>
+<h2 class=>
+<table class="hover">
   <thead>
     <tr>
       <th>Start time</th>
@@ -22,14 +25,17 @@
         <td><%= appointment.first_name %></td>
         <td><%= appointment.last_name %></td>
         <td><%= appointment.comments %></td>
-        <td><%= link_to 'Show', appointment %></td>
-        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
-        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <div class="button-group">
+            <div class="success button">
+             <%= link_to 'Show', appointment %></div>
+            <div class="secondary button"><%= link_to 'Edit', edit_appointment_path(appointment) %></div>
+            <div class="button"><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          </div>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Appointment', new_appointment_path %>

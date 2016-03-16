@@ -9,6 +9,9 @@ def availability
   Appointment.where("start_time > '10:00:00' and end_time < '12:00:00'")
 
 end
+def overlaps?(other)
+    (start_time - other.end_time) * (other.start_time - end_time) >= 0
+  end
 
 before_save :capitalize_attributes
 

@@ -10,13 +10,24 @@ html lang="en"
     = csrf_meta_tags
   body
     nav.top-bar
-     top-bar-left
-     .menu-text
-      .logo
-       = link_to "CareClient", appointments_path
+      .row
+        .medium-5.columns
+         top-bar-left
+         .menu-text
+          .logo
+           a href="http://carecloud.com" style="font-weight: 100;" CareClient
+
+      .row
+        .medium-5.columns style="border: 1px solid white; width:200px;"
+            =Time.now
+
 
 
 
 
 
     = yield
+
+
+
+  

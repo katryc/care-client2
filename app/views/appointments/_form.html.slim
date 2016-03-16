@@ -10,21 +10,21 @@
         - @appointment.errors.full_messages.each do |message|
           li= message
   .row
-    .medium-5.columns
+    .small-3.columns
       .field
         = f.label :start_time
 
         br/
         = f.datetime_select :start_time
 
-    .medium-5.columns
+    .small-3.columns
       .field
         = f.label :end_time
 
         br/
         = f.datetime_select :end_time
 
-    .large-8.columns
+    .small-6.columns
       .field
         = f.label :first_name
 
@@ -38,7 +38,7 @@
         = f.text_field :last_name
 
 
-    .medium-10.columns
+    .small-6.columns
       .field
         = f.label :comments
 
@@ -48,5 +48,4 @@
   .row
     .small-12.columns
 
-      .button.hollow
-        = f.submit
+        button.small.button name="Submit" type="submit"  Create Appointment

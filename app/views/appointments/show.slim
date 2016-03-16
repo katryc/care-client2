@@ -1,22 +1,45 @@
-p#notice= notice
-p
-  strong Start time:
-  = @appointment.start_time
-p
-  strong End time:
-  = @appointment.end_time
-p
-  strong First name:
-  = @appointment.first_name
-p
-  strong Last name:
-  = @appointment.last_name
-p
-  strong Comments:
-  = @appointment.comments
+
+
+.row.collapse
+  .medium-3.columns
+    ul#example-vert-tabs.tabs.vertical data-tabs=""
+      li.tabs-title.is-active
+        h5 Appointment Details
+        a aria-selected="true"
+      li.tabs-title
+        a href="#panel2v"  Start Time
+      li.tabs-title
+        a href="#panel3v"  End Time
+      li.tabs-title
+        a href="#panel4v"  Name
+      li.tabs-title
+        a href="#panel5v"  Last Name
+      li.tabs-title
+        a href="#panel6v"  Comments
+  .medium-9.columns
+    .tabs-content.vertical data-tabs-content="example-vert-tabs"
+      #panel2v.tabs-panel.is-active
+        p
+        = @appointment.start_time
+      #panel3v.tabs-panel
+        p
+        = @appointment.end_time
+      #panel4v.tabs-panel
+        p
+        =@appointment.first_name
+      #panel5v.tabs-panel
+        p
+        =@appointment.last_name
+      #panel6v.tabs-panel
+        p
+        =@appointment.comments
+
+
 
 
 .hollow.button
   = link_to 'Edit', edit_appointment_path(@appointment)
-.hollow.button.success
+.hollow.button
   = link_to 'Back', appointments_path
+.hollow.button
+  = mail_to 'Email'

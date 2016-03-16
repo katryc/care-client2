@@ -9,17 +9,20 @@ html lang="en"
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    nav.top-bar
-      .row
-        .medium-5.columns
-         top-bar-left
-         .menu-text
-          .logo
-           a href="http://carecloud.com" style="font-weight: 100;" CareClient
 
-      .row
-        .medium-5.columns style="border: 1px solid white; width:200px;"
-            =Time.now
+    - unless controller_name == 'landing'
+
+        nav.top-bar
+          .row
+            .medium-5.columns
+             top-bar-left
+             .menu-text
+              .logo
+               a href="http://carecloud.com" style="font-weight: 100;" CareClient
+
+          .row
+            .medium-5.columns style="border: 1px solid white; width:200px;"
+                =Time.now
 
 
 
@@ -27,7 +30,3 @@ html lang="en"
 
 
     = yield
-
-
-
-  

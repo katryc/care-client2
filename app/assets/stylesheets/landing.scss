@@ -4,10 +4,8 @@
 body {
     background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
     background-size: 300% 300%;
-    -webkit-animation: Background 25s ease infinite;
-    -moz-animation: Background 25s ease infinite;
-    animation: Background 25s ease infinite;
-    z-index: 99;
+
+
   }
 
 
@@ -40,7 +38,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 4em;
-    letter-spacing: -2px;
+    letter-spacing: -3px;
     text-align: center;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, .6);
   }
@@ -52,17 +50,17 @@ body {
     font-family: 'Poiret One', sans-serif;
     content: 'Subtitle goes here';
     font-size: .4em;
-    text-align: center;
+
   }
 
   .button-line {
-    font-family: 'Open Sans', sans-serif;
+
     text-transform: uppercase;
     letter-spacing: 2px;
     background: transparent;
     border: 1px solid #fff;
-    color: #fff;
-    text-align: center;
+
+
     font-size: 1.4em;
     opacity: .8;
     padding: 20px 40px;
@@ -71,6 +69,11 @@ body {
     margin: 0 auto;
     display: block;
     width: 100px;
+  }
+  .button-line a {
+    position: relative;
+    left:-20px;
+    color: #fff;
   }
 
   .button-line:hover {

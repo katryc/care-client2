@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# automatically generated tests
 RSpec.describe "appointments/index", type: :view do
   before(:each) do
     assign(:appointments, [

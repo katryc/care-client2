@@ -1,5 +1,7 @@
 class Appointment < ActiveRecord::Base
-validates :start_time, :end_time, :first_name, :last_name, presence: {message: ":Please, fill in the fields."}
+validates :start_time, :end_time, :first_name, :last_name, presence: {message: ":  Please, fill in the fields."}
+validates :first_name, :last_name, :uniqueness => { :scope => :start_time }
+
 before_save :capitalize_attributes
 
 def availability

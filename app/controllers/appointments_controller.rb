@@ -3,7 +3,12 @@ class AppointmentsController < ApplicationController
 
 
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @appointments.to_csv, filename: "appointments-#{Date.today}.csv" }
+    end
   end
 
 
@@ -38,7 +43,7 @@ class AppointmentsController < ApplicationController
   def update
     respond_to do |format|
       if @appointment.update(appointment_params)
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully updated.' }
+        format.html { redirect_to @appointment, notice: 'Appointment was updated.' }
         format.json { render :show, status: :ok, location: @appointment }
       else
         format.html { render :edit }

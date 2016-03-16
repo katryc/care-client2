@@ -21,7 +21,7 @@ html lang="en"
                a href="http://carecloud.com" style="font-weight: 100;" CareClient
 
           .row
-            .medium-5.columns 
+            .medium-5.columns
               .clock
                 =Time.now
 
@@ -31,3 +31,7 @@ html lang="en"
 
 
     = yield
+
+    .new_appointment
+      .button
+        = link_to "Download CSV", appointments_path(@appointment, format: :csv)

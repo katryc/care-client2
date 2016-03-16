@@ -5,16 +5,29 @@ validates :first_name, :last_name, :uniqueness => { :scope => :start_time }
   #  before filter to ensure capitalization
 before_save :capitalize_attributes
 
+def self.to_csv
+    attributes = %w{start_time end_time first_name last_name comments}
+
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+
+      all.each do |appointment|
+        csv << attributes.map{ |attr| appointment.send(attr) }
+      end
+    end
+  end
+
+
 def availability
   Appointment.where("start_time > '10:00:00' and end_time < '12:00:00'")
 
   end
-  
+
 def overlaps?(other)
     (start_time - other.end_time) * (other.start_time - end_time) >= 0
   end
 
-before_save :capitalize_attributes
+# before_save :capitalize_attributes
 
 private
    def capitalize_attributes

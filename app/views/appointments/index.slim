@@ -30,3 +30,6 @@ table.hover
             .secondary.button= link_to 'Edit', edit_appointment_path(appointment)
             .button= link_to 'Destroy', appointment, method: :delete
 br/
+
+
+= will_paginate @appointments, renderer: FoundationPagination::Rails

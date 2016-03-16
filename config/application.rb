@@ -1,4 +1,5 @@
 require File.expand_path('../boot', __FILE__)
+# ensure the csv library available throughout the app
 require 'csv'
 require 'rails/all'
 

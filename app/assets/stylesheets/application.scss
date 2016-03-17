@@ -60,20 +60,17 @@ pre {
   &:visited {
     color: white;
   }
-
-
 }
+
 .button {
   padding: 1em;
   border-radius: 18%;
 }
-.logo{
 
-  max-width: 80px;
-  z-index: 2;
-}
 .logo a{
-  color: #666666 ;
+  float:left;
+  padding-bottom: 10px;
+  color: #b0bec5 ;
   font-size: 3em;
 
 }
@@ -85,12 +82,14 @@ pre {
   background-color: #2199e8;
 }
 .clock {
-  width: 200px;
-
-  border: 1px solid white;
-  font-size: 1.5em;
-  color: #666666 ;
+  margin-left: 15px;
+  width: 180px;
+  border: 1px solid #b0bec5;
+  font-size: 1.6em;
+  color: #e0e0e0 ;
+  padding:5px;
 }
+
 
 div {
   &.field, &.actions {

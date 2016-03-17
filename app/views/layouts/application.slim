@@ -18,12 +18,13 @@ html lang="en"
              top-bar-left
              .menu-text
               .logo
-               a href="http://carecloud.com" style="font-weight: 100;" CareClient
+               a href="/" style="font-weight: 100;" CareClient
 
           .row
             .medium-5.columns
               .clock
-                =Time.now
+                
+                =Time.now.strftime("%m.%d.%Y  %H:%M")
 
 
 
@@ -31,7 +32,8 @@ html lang="en"
 
 
     = yield
+    - unless controller_name == 'landing'
 
-    .new_appointment
-      .button
-        = link_to "Download CSV", appointments_path(@appointment, format: :csv)
+      .new_appointment
+        .button
+          = link_to "Download CSV", appointments_path(@appointment, format: :csv)

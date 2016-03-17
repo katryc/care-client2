@@ -1,28 +1,38 @@
-== README
+# CareClient
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CareClient is a mobile-ready, user-frindly Appointment-Scheduling API.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - Create appointments
+  - Delete and Edit entries
+  - Download CSV records
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+> The idea is to make the process as simple as possible.
+> The user can create, update and delete records for any type of database: medical, social or scientific.
+
+
+
+
+### Version
+1.0.1
+
+### Tech
+
+CareClient uses the following technology:
+
+* [Ruby on Rails] - easy to build and maintain
+* [Foundation] - awesome front-end framework
+* [Postgresql] - a powerful the world's most advanced open source database
+* [slim] - dev-friendly template language
+* [rspec-rails] - simple testing environment
+* [csv] - perfect Ruby library enabling to read, write, download csv files
+* [validates-overlap] - a handy gem to avoid records which have time overlap
+* [ActiveSupport] - the Ruby on Rails component responsible for providing Ruby language extensions, utilities, and other transversal stuff (specifically `::Numeric::Time`)
+
+
+
+
+### Follow the link
+
+* https://afternoon-basin-79352.herokuapp.com/appointments
